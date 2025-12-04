@@ -2,6 +2,18 @@
 
 Este projeto implementa um middleware serverless para integração entre SchoolAdvisor e HubSpot, contornando limitações de plano do Operations Hub.
 
+## 📚 Documentação Completa
+
+**👉 [Acesse a Documentação Técnica Completa](./DOCUMENTATION.md)**
+
+A documentação inclui:
+- Arquitetura detalhada do projeto
+- Referência completa da API SchoolAdvisor
+- Guia do desenvolvedor (como adicionar novos endpoints, propriedades customizadas)
+- Troubleshooting & FAQ
+
+---
+
 ## 🚀 Quick Start
 
 ### Pré-requisitos
@@ -34,16 +46,9 @@ package.json           # Dependências
 .gitignore            # Arquivos ignorados
 ```
 
-## 📚 Documentação Completa
-
-Para documentação técnica detalhada, consulte:
-- `technical_documentation.md` - Guia completo de arquitetura, API reference e troubleshooting
-
 ## 🔐 Segurança
 
 **IMPORTANTE**: Nunca commite arquivos `.env.local` ou tokens de acesso.
-
-O arquivo `.gitignore` já está configurado para proteger dados sensíveis.
 
 ## 📞 Endpoint de Produção
 
