@@ -1,0 +1,7 @@
+# Dependencies
+node_modules/
+
+# HubSpot config file
+hubspot.config.yml
+.vercel
+.env*.local

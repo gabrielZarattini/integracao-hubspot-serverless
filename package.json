@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@hubspot/api-client": "^13.4.0"
+  },
+  "name": "integracao-hubspot-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
