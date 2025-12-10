@@ -21,10 +21,20 @@ export default async function handler(req, res) {
             if (!grade) return null;
             const g = grade.toLowerCase().trim();
             const map = {
-                // Infantil
+                // Infantil (com idade)
+                'infantil 1 (até 1 ano)': 'Infantil 1', 'infantil 2 (até 2 anos)': 'Infantil 2',
+                'infantil 3 (até 3 anos)': 'Infantil 3', 'infantil 4 (até 4 anos)': 'Infantil 4',
+                'infantil 5 (até 5 anos)': 'Infantil 5',
+                // Infantil (sem idade)
                 'infantil 1': 'Infantil 1', 'infantil 2': 'Infantil 2', 'infantil 3': 'Infantil 3',
                 'infantil 4': 'Infantil 4', 'infantil 5': 'Infantil 5',
-                // Fundamental
+                // Fundamental (com idade)
+                '1º ano (6/7 anos)': '1º ano EF', '2º ano (7/8 anos)': '2º ano EF',
+                '3º ano (8/9 anos)': '3º ano EF', '4º ano (9/10 anos)': '4º ano EF',
+                '5º ano (10/11 anos)': '5º ano EF', '6º ano (11/12 anos)': '6º ano EF',
+                '7º ano (12/13 anos)': '7º ano EF', '8º ano (13/14 anos)': '8º ano EF',
+                '9º ano (14/15 anos)': '9º ano EF',
+                // Fundamental (sem idade)
                 '1o ano': '1º ano EF', '1º ano': '1º ano EF', '1 ano': '1º ano EF',
                 '2o ano': '2º ano EF', '2º ano': '2º ano EF', '2 ano': '2º ano EF',
                 '3o ano': '3º ano EF', '3º ano': '3º ano EF', '3 ano': '3º ano EF',
@@ -34,7 +44,10 @@ export default async function handler(req, res) {
                 '7o ano': '7º ano EF', '7º ano': '7º ano EF', '7 ano': '7º ano EF',
                 '8o ano': '8º ano EF', '8º ano': '8º ano EF', '8 ano': '8º ano EF',
                 '9o ano': '9º ano EF', '9º ano': '9º ano EF', '9 ano': '9º ano EF',
-                // Medio
+                // Medio (com idade)
+                '1ª série (15/16 anos)': '1ª série EM', '2ª série (16/17 anos)': '2ª série EM',
+                '3ª série (17/18 anos)': '3ª série EM',
+                // Medio (sem idade)
                 '1a serie': '1ª série EM', '1ª série': '1ª série EM', '1 serie': '1ª série EM',
                 '2a serie': '2ª série EM', '2ª série': '2ª série EM', '2 serie': '2ª série EM',
                 '3a serie': '3ª série EM', '3ª série': '3ª série EM', '3 serie': '3ª série EM'
