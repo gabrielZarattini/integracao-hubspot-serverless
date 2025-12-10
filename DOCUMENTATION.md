@@ -143,12 +143,27 @@ Content-Type: application/json
 
 O sistema aceita múltiplos formatos e normaliza automaticamente:
 
-| Input Aceito | Valor Convertido no HubSpot |
-|--------------|----------------------------|
-| `1o ano`, `1 ano` | `1º ano EF` |
-| `2o ano`, `2 ano` | `2º ano EF` |
-| `Infantil 1` | `Infantil 1` |
-| `1a serie`, `1 serie` | `1ª série EM` |
+| Input Aceito (SchoolAdvisor) | Valor Convertido no HubSpot |
+|------------------------------|----------------------------|
+| `Infantil 1 (até 1 ano)` | `Infantil 1` |
+| `Infantil 2 (até 2 anos)` | `Infantil 2` |
+| `Infantil 3 (até 3 anos)` | `Infantil 3` |
+| `Infantil 4 (até 4 anos)` | `Infantil 4` |
+| `Infantil 5 (até 5 anos)` | `Infantil 5` |
+| `1º ano (6/7 anos)` | `1º ano EF` |
+| `2º ano (7/8 anos)` | `2º ano EF` |
+| `3º ano (8/9 anos)` | `3º ano EF` |
+| `4º ano (9/10 anos)` | `4º ano EF` |
+| `5º ano (10/11 anos)` | `5º ano EF` |
+| `6º ano (11/12 anos)` | `6º ano EF` |
+| `7º ano (12/13 anos)` | `7º ano EF` |
+| `8º ano (13/14 anos)` | `8º ano EF` |
+| `9º ano (14/15 anos)` | `9º ano EF` |
+| `1ª série (15/16 anos)` | `1ª série EM` |
+| `2ª série (16/17 anos)` | `2ª série EM` |
+| `3ª série (17/18 anos)` | `3ª série EM` |
+
+> **Nota**: Formatos alternativos também são aceitos (ex: `1o ano`, `1 ano`, `Infantil 1`).
 
 ### **Exemplo de Request (cURL)**
 
@@ -544,6 +559,6 @@ Para dúvidas técnicas ou solicitações de integração:
 
 ---
 
-**Última Atualização**: 03/12/2025  
-**Versão da Documentação**: 1.0  
+**Última Atualização**: 09/12/2025  
+**Versão da Documentação**: 1.1  
 **Autor**: Equipe de Desenvolvimento - Integrações HubSpot
