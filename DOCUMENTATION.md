@@ -237,7 +237,9 @@ Cada requisição bem-sucedida gera:
 | `serie_de_interesse` | Input: `grade_level` (normalizado) |
 | `aluno1__unidade_de_interesse` | Input: `type` |
 
-**Associação**: Aluno → Contato (Tipo: `38` - "Responsável")
+**Associações**:
+- Aluno → Contato (Tipo: `38` - "Responsável")
+- Aluno → Negócio (Tipo: `33` - "Alunos da Venda")
 
 #### 3. **Negócio (Deal)**
 | Propriedade HubSpot | Valor |
@@ -251,7 +253,9 @@ Cada requisição bem-sucedida gera:
 | `canal` | `"SEO Local Pago"` (fixo) |
 | `canal_empresa_parceira` | Input: `source` |
 
-**Associação**: Negócio → Contato (Tipo: `3` - Deal to Contact)
+**Associações**:
+- Negócio → Contato (Tipo: `3` - Deal to Contact)
+- Negócio ← Aluno (via associação acima)
 
 ---
 
@@ -559,6 +563,6 @@ Para dúvidas técnicas ou solicitações de integração:
 
 ---
 
-**Última Atualização**: 09/12/2025  
-**Versão da Documentação**: 1.1  
+**Última Atualização**: 10/12/2025  
+**Versão da Documentação**: 1.2  
 **Autor**: Equipe de Desenvolvimento - Integrações HubSpot

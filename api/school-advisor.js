@@ -178,6 +178,27 @@ export default async function handler(req, res) {
             const d = await hubspotClient.crm.deals.basicApi.create(dealObj);
             dealId = d.id;
             console.log(`Created Deal: ${dealId}`);
+
+            // 7. Associate Aluno to Deal (if Aluno was created)
+            if (alunoId) {
+                try {
+                    await hubspotClient.crm.associations.v4.basicApi.create(
+                        '2-46165031', // Aluno object type
+                        alunoId,
+                        'deals',
+                        dealId,
+                        [
+                            {
+                                associationCategory: "USER_DEFINED",
+                                associationTypeId: 33 // 33 = "Alunos da Venda" (Aluno -> Deal)
+                            }
+                        ]
+                    );
+                    console.log(`Associated Aluno ${alunoId} to Deal ${dealId}`);
+                } catch (assocError) {
+                    console.error("Association Error:", assocError.message);
+                }
+            }
         }
 
         return res.status(200).json({ status: "success", contactId, alunoId, dealId, foundBy });
