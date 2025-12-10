@@ -254,8 +254,8 @@ Cada requisição bem-sucedida gera:
 | `canal_empresa_parceira` | Input: `source` |
 
 **Associações**:
-- Negócio → Contato (Tipo: `3` - Deal to Contact)
-- Negócio ← Aluno (via associação acima)
+- Negócio → Contato (Tipo: `3` - "Responsável")
+- Negócio ← Aluno (Tipo: `33` - "Alunos da Venda")
 
 ---
 

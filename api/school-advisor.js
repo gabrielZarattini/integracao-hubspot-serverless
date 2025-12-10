@@ -167,8 +167,8 @@ export default async function handler(req, res) {
                         to: { id: contactId },
                         types: [
                             {
-                                associationCategory: "HUBSPOT_DEFINED",
-                                associationTypeId: 3 // 3 = Deal to Contact
+                                associationCategory: "USER_DEFINED",
+                                associationTypeId: 3 // 3 = Deal to Contact (Label: "Responsável")
                             }
                         ]
                     }
